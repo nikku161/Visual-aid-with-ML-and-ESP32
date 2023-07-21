@@ -4,7 +4,7 @@ import numpy as np
 import pyttsx3
 import random
 
-net = cv2.dnn.readNet("./yolov3.weights", "cfg/yolov3.cfg")
+net = cv2.dnn.readNet("./yolov7-tiny.weights", "cfg/yolov7.cfg")
 
 classes = []
 lis = []
@@ -78,7 +78,7 @@ while True:
                                 print(" and " + item ,end=" ")
                                 text_speech.say(" and " + item)
                                 text_speech.runAndWait()
-                        
+                lis.clear()        
                         # print( "at a distance of " + str(round(random.uniform(350,600),2)))
                         # text_speech.say("at a distance of " + str(round(random.uniform(350,600),2)))
                         # text_speech.runAndWait()
